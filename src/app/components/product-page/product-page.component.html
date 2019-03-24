@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <app-product-categories></app-product-categories>
+    </div>
+    <div class="col-lg-9">
+      <div class="row my-4">
+        <div class="card my-4">
+          <img class="card-img-top img-fluid" class="card-img-top" [src]="productItem.photo" [alt]="productItem.title" />
+          <div class="card-body">
+            <h3 class="card-title">{{ productItem.name }}</h3>
+            <h4 class="text-success">{{ productItem.price | currency }}</h4>
+            <p class="card-text">
+              {{ productItem.description }}
+            </p>
+            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            4 stars
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

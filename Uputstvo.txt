@@ -1,0 +1,46 @@
+Preuzmite materijal "Angular osnove template 2".
+
+Tu se nalaze stranice koju trebate da "podvucete" kroz angular: products.html, product.html i about.html
+
+Kreirajte angular projekat angular-osnove-domaci2 (obavezno potvrdite da zelit rutiranje!!!)
+
+Stranice koje trebate da imate u projektu :
+
+Products Page ( Home) - pocetna stranica koja prikazuje sve proizvode i treba da izgleda kao products.html iz materijala
+Product Page - stranica koja prikazuje jedan proizvod i treba da izgleda kao product.html
+About Page - stranica koja prikazuje podatke o firmi, treba da izgleda kao about.html
+Na stranici Products Page se dolazi klikom na link "Home" u gornjem desnom uglu. Na toj stranici trebaju da se prikazu proizvodi koji su dati u fajlu products.json (Proizvode dohvatati iz servisa za proizvode). Svaki proizvod u listi treba da ima link na slici i link na naslovu i kada se taj link klikne treba da se predje na stranicu "Product Page". 
+
+Stranica Product Page treba da bude mapirana na url koji sadrzi ID proizvoda koji treba da se prikaze. Na ovoj stranici se prikazuje jedan proizvod.
+
+Jedan proizvod ima sledece kljuceve:
+
+id - ID proizvoda
+name - Nazvi proizvoda
+description - Opis proizvoda
+photo - URL do fotografije proizvoda
+price - cena proizvoda
+old_price - stara cena proizvoda koja se prikazuje ako je veca od nule i to crvenom bojom sa precrtanom linijom
+rank - ocena proizvoda i moze da bude od 1 do 5, prikazana je sa zvezdicama
+category_id - ID kategorije proizvoda, nigde se ne prikazuje
+Na stranici About Page se dolazi klikom na link "About" u gornjem desnom uglu. Ova strania ne radi nista posebno samo prikazuje statican HTML.
+
+Na stranici Products Page i Product Page sa leve strane izlistane su kategorije proizvoda. Prikazati kategorije koje su date u fajlu categories.json (kategorije dohvatati i servisa za kategorije). Klikom na link od jedne kategorije ne treba da se desi nista, bitno je samo da se prikazu i dovuku iz posebnog servisa.
+
+ 
+
+Sve 3 stranice organizovati kroz komponente i napraviti odgovarajuce rute i servise.
+
+Instalirati bootstrap framework preko npm komande,   ne ukljucivati ga u "head"!!!
+
+Stil u materijalu za domaci je dat u fajlu "css/shop-homepage.css". Kpirati sadrzaj fajla u projekat u fajl src/styles.scss.
+
+ 
+
+BONUS ZADATAK - NIJE OBAVEZNO
+
+Kreirati jos jednu stranicu Product Category Page koja ce prikazivati proizvode iz jedne od kategorija, treba da izgleda u sustini isto kao i products page. Ova komponenta treba da procita ID kategorije iz URL-a i da na osnocvu ID-ja kategorije ucita proizvode iz te kategorije (posebna funkcija na servisu za proizvode getProductsByCategoryId(categoryId) na primer).
+
+Kada se prikazuje Product Category Page stranica, sa leve strane u listi kategorija, kategorija koja se prikazuje treba da ima klasu "active".
+
+Takodje kada se prikazuje jedan proizvod tj Product Page sa leve strane u listi kategorija, kategorija u kojoj je sam proizvod treba da ima klasu "active"

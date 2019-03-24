@@ -1,0 +1,14 @@
+<div class="card h-100">
+  <a routerLink="/products/product/{{ product.id }}"><img class="card-img-top" [src]="product.photo" [alt]="product.title"/></a>
+  <div class="card-body">
+    <h4 class="card-title">
+      <a routerLink="/products/product/{{ product.id }}">{{ product.name }}</a>
+    </h4>
+    <del class="text-danger mr-2" *ngIf="product.old_price > 0">{{ product.old_price | currency }}</del>
+    <span class="text-success">{{ product.price | currency }}</span>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+  </div>
+</div>
